@@ -1,0 +1,82 @@
+<!-- <div class="container mx-auto my-12">
+  <div class="card card-side bg-base-100 shadow-xl">
+    <figure>
+      <img
+        src="{{ product?.image }}"
+        alt="Movie"
+        class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+      />
+    </figure>
+    <div class="card-body">
+      
+      <div class="flex flex-col w-full">
+        <div class="grid h-20 card bg-base-300 rounded-box place-items-center">
+          {{ product?.title }}
+        </div>
+        <div class="divider"></div>
+        <div
+          class="grid h-20 card bg-base-300 rounded-box place-items-center px-2 py-4"
+        >
+          {{ product?.description }}
+        </div>
+      </div>
+      <br />
+      <div class="flex w-full">
+        <div
+          class="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center"
+        >
+          Price : {{ product?.price }}
+        </div>
+        <div class="divider divider-horizontal">-</div>
+        <div
+          class="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center"
+        >
+          Category : {{ product?.category }}
+        </div>
+      </div>
+      <button class="btn btn-primary mt-4" (click)="goBack()">Go Back</button>
+    </div>
+  </div>
+</div> -->
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+  integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+  crossorigin="anonymous"
+/>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="project-info-box mt-0">
+        <h4 class="h4">{{ product?.title }}</h4>
+      </div>
+      <div class="project-info-box mt-0">
+        <h5 class="h5">PRODUCT DETAILS</h5>
+        <p class="mb-0">{{ product?.description | slice: 0:200}}</p>
+      </div>
+      <!-- / project-info-box -->
+
+      <div class="project-info-box">
+        <p><b>Price:</b>{{ product?.price }}</p>
+        <p><b>Rating:</b>{{ product?.rating?.rate }}</p>
+        <p><b>Rating Count:</b>{{ product?.rating?.count }}</p>
+      </div>
+      <button class="btn btn-primary mt-4" (click)="goBack()">Back</button>
+    </div>
+
+    <div class="col-md-7">
+      <img
+        src="{{ product?.image }}"
+        alt="project-image"
+        class="rounded"
+        style="height: 30rem"
+      />
+      <div class="project-info-box">
+        <p><b>Category:</b> {{ product?.category }}</p>
+      </div>
+      <!-- / project-info-box -->
+    </div>
+    <!-- / column -->
+  </div>
+</div>
